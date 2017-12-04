@@ -21,3 +21,31 @@
         </div>
     </div>
 </div>
+
+<h2>Burger to be eaten</h2>
+<ol>
+	{{#each burgers}}
+		{{#unless this.Devoured}}
+		<li>
+  		<p><span class="label"></span> {{this.id}}</p>
+  		<p><span class="label"></span> {{this.Burger_Name}}</p>
+  		<button data-id="{{this.id}}" class="devourBurger">Devour Burger</button>
+  	</li>
+  		{{/unless}}
+		{{/each}}
+  		
+</ol>
+
+
+<h2>Burger Devoured</h2>
+<ol>
+	{{#each burgers}}
+		{{#if this.Devoured}}
+		<li>
+  		<p><span class="label"></span> {{this.id}}</p>
+  		<p><span class="label"></span> {{this.Burger_Name}}</p>
+  	</li>
+  		{{/if}}
+		{{/each}}
+  		
+</ol>

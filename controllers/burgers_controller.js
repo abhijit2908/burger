@@ -12,10 +12,11 @@ router.get('/',function(req,res){
 			burgers: data
 		}
 
-		//console.log(data);
+		console.log(data);
+		res.render("index",burgerObject);
 	})
 
-	res.render("index");
+	
 
 });
 
