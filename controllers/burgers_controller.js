@@ -24,10 +24,10 @@ router.post('/api/burgers',function(req,res){
 	//console.log("I posted via postman");
 	//console.log(req.body);
 	burger.create("burgers",'Burger_Name','Devoured',req.body.Burger_Name, req.body.Devoured ,function(data){
-		//console.log(data);
-			//console.log(req.body);
+		console.log(data);
+			console.log(req.body);
 
-		//res.json({id: data.insertId});
+		res.json({id: data.insertId});
 	});
 });
 
@@ -36,8 +36,8 @@ router.put('/api/burgers/:id', function(req,res){
 	console.log(condition);
 
 	burger.update("burgers",'Devoured',req.body.Devoured,condition,function(data){
-
-
+		console.log(req.body);
+			res.json({id: data.insertId});
 		console.log(data);
 	})
 
